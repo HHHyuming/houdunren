@@ -1,0 +1,9 @@
+/* body {
+  background-color: green;
+  font-size: 46px;
+} */
+@import url("./test.css");
+
+body h1 {
+  color: blue;
+}
