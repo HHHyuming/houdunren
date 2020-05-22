@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        div.d1 div{
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            padding: 50px;
+        }
+        div.d2 > div{
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            padding: 50px;
+        }
+
+        .d1+.d2{
+            border:5px silver solid;
+        }
+
+        .d3~*.d4{
+            background-color: springgreen;
+            height: 30px;
+            border: 1px silver solid;
+        }
+    </style>
+    
+    <div class="d1">
+        <h2>后代选择器</h2>
+        <div><div>123</div></div>
+        <div></div>
+    </div>
+
+
+    <div class="d2">
+        <h2>子元素选择器</h2>
+        <div>
+            <div>123</div>
+        </div>
+        <div></div>
+    </div>
+
+    <div class="d3">
+        
+    </div>
+    <div class="d4"></div>
+    <div class="d5"></div>
+    <div></div>
+</body>
+</html>

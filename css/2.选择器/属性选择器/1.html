@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        /* h1[class='test']{
+            color: slateblue;
+        } */
+        h1[class='test'][id='who']{
+            color: yellow;
+        }
+
+        h1[class^='t']{
+            background-color: pink;
+        }
+        h2[end$='end']{
+            background-color: #ccc;
+            opacity: 0.3;
+        }
+    </style>
+
+    <h1 class="test">
+        houdunren.com
+    </h1>
+
+    <h1 class="test" id="who">
+        yuming
+    </h1>
+
+    <h1 class="t2">
+       以xx为开头的样式 
+    </h1>
+
+    <h2 end='end'>
+        以xxx结尾的样式
+    </h2>
+</body>
+</html>
