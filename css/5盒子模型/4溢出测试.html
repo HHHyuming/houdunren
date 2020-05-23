@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            overflow: scroll;
+            border: 1px solid silver;
+        }
+    </style>
+
+
+<div>
+
+    ### 修改state数据
+# 这个edit 会去修改state
+this.$store.commit("edit",{args:'参数'})
+
+### 增加state数据
+Vue.set(state, 'xxxx','xxxx')
+### 删除state数据
+Vue.delete(state,'xxxx','xxxx')
+
+</div>
+
+</body>
+</html>

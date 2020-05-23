@@ -44,12 +44,26 @@ element1~element | p~ ul
 only-of-type | 选择同级中唯一为xxx的元素
 only-child | 选择唯一子元素为xxx
 
-:nth-child(n) |
+:nth-child(n) | 第n个child
 :nth-child(odd)
-:nth-child(even)
-:nth-of-type(n)
+:nth-child(even) 
+:nth-of-type(n) |第 n个类型为xxx的child
 
 :nth-last-child(n)
 :nth-last-of-type(1)
 
 :not(selector) | :not(p)
+
+## 表单伪类
+:enabled 启用
+:disabled 禁用
+:checked 被选中的
+:required 包含 required的元素
+:optional 不包含required 的元素
+:valid 验证通过的表单元素
+:invalid 验证不通过的元素
+
+## 字符伪类
+::before 在每个元素之前插入
+::after 在每个元素之后插入
+::first-letter 选择元素的首字母

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        div span:nth-of-type(2){
+            color: blue;
+        }
+
+        div span:nth-child(2){
+            background-color: brown;
+        }
+        tr >td:not(:nth-child(odd)){
+            background-color: chartreuse;
+        }
+    </style>
+
+    <div>
+        <span>第一个span</span>
+        <span>第五个span</span>
+        <div>
+            <span>第二个span</span>
+            <span>第四个span</span>
+        </div>
+        <p>第一个p</p>
+        <span>第三个span</span>
+    </div>
+
+
+    <table border="1">
+        <tr>
+          <td>houdunren.com</td>
+          <td>hdcms.com</td>
+          <td>后盾人</td>
+          <td>houdunwang.com</td>
+          <td>hdcms</td>
+        </tr>
+</body>
+</html>
