@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+
+        div:first-child{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            transition: 1s;
+        }
+        div:first-child:hover{
+            transform: translateX(50px);
+        }
+
+        #increase:target:last-child{
+            widows: 100px;
+            height: 100px;
+            background-color: thistle;
+        }
+
+    </style>
+
+    <main>
+        <div>
+            最帅的帅
+        </div>
+
+        <div id="increase">
+            增加
+        </div>
+
+        <div id="decrease">
+            减小
+        </div>
+
+        <div>
+
+        </div>
+    </main>
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        article{
+            position: relative;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+        }
+
+        article div:nth-child(1){
+            border: 3px solid blueviolet;
+            z-index: 1;
+            position: absolute;
+        }
+
+        
+        article div:nth-child(2){
+            background-color: red;
+            position: absolute;
+        }
+        
+        article div:nth-child(3){
+            background-color: green;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+
+    <article>
+
+        <div></div>
+        <div></div>
+        <div></div>
+    </article>
+
+</body>
+</html>

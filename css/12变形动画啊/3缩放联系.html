@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        article {
+            background-color: cadetblue;
+        }
+
+        article section:nth-child(1){
+            background-color: chocolate;
+            text-transform: uppercase;
+            filter: blur(15px);
+            
+        }
+
+        article section:nth-child(1):hover+section{
+            transform: scale(0.5);
+            
+        }
+
+        article section:nth-child(2){
+            background-color: chocolate;
+            text-transform: uppercase;
+            transition: 1s;
+            transform: scale(0);
+        }
+
+        
+        
+    </style>
+    
+    <article>
+        <section>
+            <span>VIDEO</span>
+        </section>
+        <section>
+            <div>PHP</div>
+            <div>LINUX</div>
+            <div>PYTHON</div>
+        </section>
+    </article>
+</body>
+</html>

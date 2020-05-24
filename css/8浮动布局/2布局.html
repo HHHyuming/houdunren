@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        main{
+            width: 100vw;
+            height: 100vh;
+            margin: 0 auto;
+        }
+        main article{
+            overflow: auto;
+            height: 220px;
+            border: 1px solid red;
+        }
+        main article section{
+            width: 200px;
+            height: 200px;
+            
+        }
+
+        main article section:nth-child(1){
+            background-color: yellowgreen;
+            float: left;
+        }
+
+        main article section:nth-child(2){
+            background-color: black;
+            float: right;
+        }
+
+        main footer section{
+            width: 200px;
+            height: 200px;
+        }
+
+        main footer {
+            overflow: auto;
+            height: 220px;
+        }
+        main footer section:nth-child(1){
+            float: left;
+            background-color: royalblue;
+        }
+
+        main footer section:nth-child(2){
+            background-color: skyblue;
+            float: right;
+        }
+    </style>
+
+    <main>
+        <article>
+            <section></section>
+            <section></section>
+        </article>
+
+        <footer>
+            <section></section>
+            <section></section>
+        </footer>
+    </main>
+</body>
+</html>

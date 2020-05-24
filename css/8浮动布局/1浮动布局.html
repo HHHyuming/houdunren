@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        main div:nth-child(2){
+            border: 3px solid silver;
+            width: 100px;
+            height: 100px;
+            /* box-sizing: border-box; */
+            float: right;;
+            background-color: tomato;
+            
+        }
+        main div:nth-child(1){
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            float: left;
+            /* clear: both; */
+            
+        }
+        main div:nth-child(1)::after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+        main{
+            background-color: silver;
+            overflow: auto;
+            height: 100vh;
+            border: 12px solid silver;
+            background-clip: content-box;
+            padding: 10px;
+        }
+
+        main div:nth-child(3){
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            /* float: left; */
+            /* clear: both; */
+            
+        }
+    </style>
+<main>
+    <div>第一个</div>
+    <div>第二个</div>
+
+    <div>第三个DIV</div>
+</main>
+    
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* div{ */
+            /* background-image: url('./bear.jpg'); */
+            /* background-clip: border-box; */
+            /* background-repeat: repeat-y; */
+        /* } */
+        /* body{
+            background: url('./bear.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 2000px;
+            background-position: center;
+            background-size : 50% 100%;
+            
+        } */
+
+        /* body div:nth-of-type(1){
+            box-shadow: 5px 5px 5px rgba(50, 50, 50, .3);
+            width: 50px;
+            height: 50px;
+            border: 1px solid silver;
+            background-color: white;
+            opacity: 0.6;
+        } */
+        body{
+            display: flex;
+            justify-content: space-around;
+        }
+        div:nth-child(2){
+            width: 100px;
+            height: 100px;
+            border: solid 1px silver;
+            /* background: linear-gradient(90deg,red, green, red); */
+            background: radial-gradient(500% 500%, red, blue, green);
+        }
+        div:nth-child(3){
+            width: 100px;
+            height: 100px;
+            border: 1px solid silver;
+            background: radial-gradient(red 0, yellow 30%, black 70%, black 100%);
+            
+        }
+
+        div:nth-child(4){
+            width: 150px;
+            height: 30px;
+            border: 1px solid silver;
+            background: linear-gradient(45deg, red 30%,blue 60%);
+            
+        }
+
+        div:nth-child(4){
+            width: 150px;
+            height: 30px;
+            border: 1px solid silver;
+            background: repeating-linear-gradient(90deg, blue 25px, 40px red 50px);
+            
+        }
+    </style>
+
+    
+
+    <div>
+        颜色渐变
+    </div>
+
+    <div>
+        方向渐变测试
+    </div>
+
+    <div>
+        线性渐变
+    </div>
+
+    
+    <div>
+        渐变重复
+    </div>
+</body>
+</html>
