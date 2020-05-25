@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      main {
+        height: 500px;
+        widows: 500px;
+        background-color: slategray;
+        color: red;
+      }
+      div strong {
+        transition: 1s;
+      }
+      div strong:nth-child(1) {
+        background-color: orange;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        text-align: center;
+      }
+
+      main:hover strong:nth-child(1) {
+        transform: rotate(360deg);
+      }
+
+      main:hover strong:nth-child(2) {
+        transform: rotate(-360deg);
+      }
+
+      div strong:nth-child(2) {
+        background-color: greenyellow;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        text-align: center;
+      }
+    </style>
+
+    <main>
+      <div><strong>h</strong>ou<strong>d</strong>unren.com</div>
+    </main>
+  </body>
+</html>

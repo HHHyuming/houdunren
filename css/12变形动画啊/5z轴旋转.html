@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        list-style: none;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: #34495e;
+      }
+
+      main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 200px;
+        height: 200px;
+        background: #f1c40f;
+        perspective: 600px;
+        transform: perspective(600px) rotateY(35deg);
+        transition: 2s;
+      }
+
+      body:hover main {
+        transform: perspective(600px) rotateY(35deg) rotateZ(160deg);
+      }
+    </style>
+
+    <main>
+      <div></div>
+    </main>
+  </body>
+</html>
