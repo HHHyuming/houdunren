@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.定义
+      let m = new Map();
+
+      m.set("a", "aa");
+      console.log(m);
+      //2. map 大小
+      console.log(m.size);
+      //   3.map
+      console.log(m.get("a"));
+      //  4. 和集合类似 keys() values() entires() 返回可迭代对象
+
+      m.set("c", "c").set("d", "d", "e", "e");
+      for (const key of m.keys()) {
+        console.log(m.get(key));
+      }
+      console.log(m);
+      //   5.元素检测 map.has('xxx')
+      // 6.删除元素 delete 清空元素 clear
+      //   7.转换成数组
+      console.log(m.values());
+
+      console.log(Array.from(m.values()));
+    </script>
+  </body>
+</html>

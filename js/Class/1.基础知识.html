@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class User {
+        constructor(name) {
+          this.name = name;
+          this.show = function () {};
+        }
+        getName() {
+          return this.name;
+        }
+      }
+      const xj = new User("向军大叔");
+      console.log(xj);
+      console.log(xj.__proto__);
+      console.log(User.prototype);
+
+      function Test() {
+        xxxx: "sd";
+        let n = function name() {
+          console.log("name");
+        };
+        let a = function age() {
+          console.log("age");
+        };
+      }
+      console.dir(Test);
+
+      console.log(new Test());
+
+      for (const key in new Test()) {
+        console.log(key);
+      }
+    </script>
+  </body>
+</html>

@@ -62,3 +62,49 @@ repeat
 console.log(nick.indexOf("你"));
 console.log("我".includes(nick));
 console.log(nick.includes("我"));
+
+// Boolean 构造函数
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+// Number 构造函数
+
+/*
+isInterger 判断是否为一个整数
+toFixed 四舍五入
+isNaN 判断是不是一个数字
+
+parseInt
+parseFloat
+
+
+*/
+
+console.log(Number.isNaN("1"));
+console.log(Number.isNaN(1));
+let a = [1, 2];
+console.log(Object.is(1, a));
+
+// console.log("我" in nick);
+
+a = [1, 2, 3, 4];
+
+// Math 数学库
+console.log(Math.random());
+
+// Date 日期
+let now = new Date();
+
+console.log(now.toTimeString());
+console.log(now.toUTCString());
+
+console.log(now.toTimeString());
+
+now.getTime();
+
+/**
+ * 时间戳
+ * getTIme 返回毫秒 = *10^-3 s
+ *
+ */

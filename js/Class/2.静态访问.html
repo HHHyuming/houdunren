@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Request {
+        static host = "127.0.0.1";
+        constructor(url) {
+          this.url = url;
+        }
+        show() {
+          console.log(Request.host);
+          console.log(this.url);
+        }
+        static method2() {
+          console.log("这是一个静态方法，只能由类调用");
+        }
+      }
+
+      const r1 = new Request("/api");
+      r1.show();
+      Request.method2();
+    </script>
+    <script>
+      function User() {
+        this.show = function () {
+          return "this is a object function";
+        };
+      }
+      User.show = function () {
+        return "welcome to houdunren";
+      };
+      const xj = new User();
+      console.dir(xj);
+      console.dir(User);
+
+      console.log(xj.__proto__ == User.prototype);
+
+      //   console.dir(xj.show()); //this is a object function
+      //   console.dir(User.show()); //welcome to houdunren
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const hd = {
+        name: "后盾人",
+        lessons: {
+          title: "JS",
+        },
+      };
+      const {
+        name,
+        lessons: { title },
+      } = hd;
+      console.log(name, title); //后盾人 JS
+
+      //   1.添加属性 删除属性 检测属性
+      let obj = {};
+      obj.p = "p";
+      console.log(obj);
+      delete obj.p;
+      console.log(obj);
+
+      obj.x = "x1";
+      console.log(obj.hasOwnProperty("x")); // true
+      //   2. 使用 in 在原型链上检测
+      console.log("valueOf" in obj);
+      //   扩展
+      Object.assign(obj, { abc: "abc" });
+      console.log(obj);
+      //   4.遍历对象 keys() values() entries()
+      console.log(Object.keys(obj));
+      let s = new Set([1, 2, 3, 4]);
+      console.log(s.keys());
+      console.log(obj);
+      console.log(s);
+      let cc = {};
+      console.log(cc["x"]);
+    </script>
+  </body>
+</html>

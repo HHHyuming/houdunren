@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.every 遍历所有，全为真才为真
+      const user = [
+        { name: "李四", js: 89 },
+        { name: "马六", js: 50 },
+        { name: "张三", js: 78 },
+      ];
+      let flag = user.every((item) => {
+        if (item.js >= 60) {
+          return true;
+        }
+      });
+      console.log(flag);
+
+      // 2.some 有一个真就是真
+      flag = user.some((item) => item.js >= 60);
+      console.log(flag);
+    </script>
+  </body>
+</html>

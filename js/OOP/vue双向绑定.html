@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" v-model="content" name="input1" />
+    <input type="text" v-model="content" name="input2" />
+    <span v-bind="content"></span>
+  </body>
+  <script>
+    function View() {
+      let proxy = new Proxy(
+        {},
+        {
+          get(obj, property) {},
+          set(obj, property, value) {
+            let data_node = document.querySelectorAll(
+              `[v-model=${property}],[v-bind=${property}]`
+            );
+            data_node.forEach((item) => {
+              item.value = value;
+              item.innerHTML = value;
+            });
+          },
+        }
+      );
+
+      this.run = function () {
+        // 寻找两个inpupt 绑定事件
+        let els = document.querySelectorAll("[v-model]");
+        for (const node of els) {
+          node.addEventListener("keyup", function (event) {
+            proxy[this.getAttribute("v-model")] = this.value;
+          });
+        }
+      };
+    }
+
+    new View().run();
+  </script>
+</html>

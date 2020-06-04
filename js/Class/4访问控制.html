@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Article {
+        _host = "www.baidu.com";
+        constructor() {}
+        set host(v) {
+          this._host = v;
+        }
+
+        get host() {
+          return this._host;
+        }
+      }
+      const a = new Article();
+
+      console.log(a._host);
+      a.host = "Tencent.com";
+      console.log(a.host);
+    </script>
+
+    <script>
+      class Common {
+        _host = "https://houdunren.com";
+        set host(url) {
+          if (!/^https:\/\//i.test(url)) {
+            throw new Error("网址错误");
+          }
+          this._host = url;
+        }
+      }
+      class Article extends Common {
+        lists() {
+          return `${this._host}/article`;
+        }
+      }
+      let article = new Article();
+      console.log(article.lists()); //https://houdunren.com/article
+      article.host = "https://hdcms.com";
+      console.log(article.lists()); //https://hdcms.com/article
+    </script>
+
+    <script>
+      class Foo {
+        f1 = "x";
+        constructor(p) {
+          this.pro = p;
+        }
+      }
+      const f = new Foo("xx");
+      console.log(f.f1);
+      console.log(f.pro);
+      console.log("----------protected");
+    </script>
+
+    <script>
+      const protecteds = Symbol();
+      class Common {
+        constructor() {
+          this["abc"] = "abc";
+          this[protecteds] = {};
+          this[protecteds].host = "https://houdunren.com";
+        }
+        set host(url) {
+          if (!/^https?:/i.test(url)) {
+            throw new Error("非常网址");
+          }
+          this[protecteds].host = url;
+        }
+        get host() {
+          return this[protecteds].host;
+        }
+      }
+      class User extends Common {
+        constructor(name) {
+          super();
+          this[protecteds].name = name;
+        }
+        get name() {
+          return this[protecteds].name;
+        }
+      }
+      let hd = new User("后盾人");
+      hd.host = "https://www.hdcms.com";
+      console.log(hd[Symbol()]);
+      //   console.log(Symbol() == undefined);
+      console.log(hd.abc);
+      console.log(hd["abc"]);
+
+      console.log(hd.name);
+    </script>
+  </body>
+</html>

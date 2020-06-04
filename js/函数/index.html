@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 定义 普通函数
+      function info() {
+        console.log("xxx");
+      }
+      info();
+
+      // 2. 匿名函数  标准声明高于赋值声明
+      let s = function () {
+        console.log("我是一个函数");
+      };
+      s();
+      //   3.立即执行
+      (function (arg) {
+        console.log(arg);
+      })("这是一个参数");
+
+      console.log("----------");
+
+      //   4. 函数参数 arguments
+      (function () {
+        // console.log(a);
+
+        console.log(arguments);
+      })(1, 2, 3, 4, 5);
+      //   5. apply / call / bind 改变this指针
+
+      function User(name) {
+        this.name = name;
+        this.foo = function (obj, info) {
+          console.log(obj);
+          console.log("foo" + info);
+        };
+      }
+      let u2 = {};
+      let u1 = new User("最帅的帅");
+
+      User.call(u2, "你也是最帅的帅");
+      console.log(u2);
+      console.log(u1);
+      //   6.bind 用于返回一个新的函数
+      let u3 = {};
+      let newFun = u1.foo.bind();
+      newFun(u3, "---阿尔弗雷德大帝");
+    </script>
+  </body>
+</html>
