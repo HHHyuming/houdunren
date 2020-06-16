@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+      }
+      header {
+        background-color: orangered;
+        height: 10vh;
+        display: flex;
+        color: white;
+        font-size: 1.5em;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+        animation-name: a-header;
+        animation-duration: 2s;
+        /* animation-iteration-count: infinite; */
+        animation-fill-mode: forwards;
+      }
+      main {
+        height: 80vh;
+        background-image: url("./1.png");
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 20px;
+        background-size: 100% 100%;
+        animation-name: a-main;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+      }
+
+      main > div:nth-child(1) {
+        flex: 1;
+
+        background-color: blueviolet;
+        opacity: 0.5;
+        color: white;
+        white-space: pre-wrap;
+        justify-content: center;
+        transform: scale(0);
+        animation-fill-mode: forwards;
+        animation-name: a-main-div;
+        animation-duration: 2s;
+        animation-delay: 2s;
+      }
+      main > div:nth-child(2) {
+        background-color: orchid;
+        opacity: 0.5;
+        margin-top: 20px;
+        color: white;
+        padding: 5px;
+        white-space: pre-wrap;
+        flex: 1;
+        justify-content: center;
+        transform: scale(0);
+        animation-fill-mode: forwards;
+        animation-name: a-main-div;
+        animation-duration: 2s;
+        animation-delay: 3s;
+      }
+      footer {
+        height: 10vh;
+        background-color: palegreen;
+        display: flex;
+        color: white;
+        font-size: 1.5em;
+        justify-content: center;
+        align-items: center;
+        animation-name: a-footer;
+        animation-duration: 2s;
+        animation-delay: 3.5s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes a-header {
+        to {
+          transform: scale(1);
+        }
+      }
+      @keyframes a-main {
+        from {
+          opacity: 0.5;
+        }
+        to {
+          transform: rotate(360deg);
+          opacity: 1;
+        }
+      }
+      @keyframes a-main-div {
+        0% {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0) rotate(360deg) scale(1);
+        }
+      }
+      @keyframes a-footer {
+        0% {
+          transform: translateX(-100%) skewX(-60deg);
+        }
+
+        to {
+          transform: translateX(0);
+        }
+      }
+    </style>
+    <div>
+      <header>yuming</header>
+      <main>
+        <div>
+          《阿丽塔：战斗天使》是由二十世纪福斯电影公司出品的科幻动作片，由罗伯特·罗德里格兹执导，罗莎·萨拉扎尔、克里斯托弗·瓦尔兹、马赫沙拉·阿里、詹妮弗·康纳利联合主演。该片于2019年2月14日在美国上映，于2019年2月22日在中国内地上映。《阿丽塔：战斗天使》根据日本漫画家木城雪户的小说《铳梦》改编，影片故事背景设定在在26世纪，讲述了身处末
+        </div>
+        <div>
+          《阿丽塔：战斗天使》是由二十世纪福斯电影公司出品的科幻动作片，由罗伯特·罗德里格兹执导，罗莎·萨拉扎尔、克里斯托弗·瓦尔兹、马赫沙拉·阿里、詹妮弗·康纳利联合主演。该片于2019年2月14日在美国上映，于2019年2月22日在中国内地上映
+          [1] 。
+        </div>
+      </main>
+      <footer>HHHyuming.com</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+
+      div {
+
+        background-color: greenyellow;
+        width: 100px;
+        height: 100px;
+        /* transform: rotate(90deg); */
+        animation-name: test;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      section {
+        margin-top: 50px;
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+        animation-timing-function: steps(10, start);
+        animation-name: test2;
+        animation-duration: 2s;
+        /* animation-fill-mode: forwards; */
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes test {
+        to {
+          transform: translateX(200px);
+        }
+      }
+      @keyframes test2 {
+        to {
+          transform: translateX(200px);
+        }
+      }
+      main{
+          border: 1px solid red;
+          width: 300px;
+      }
+    </style>
+    <main>
+    <div></div>
+    <section></section>
+</main></main>
+  </body>
+</html>

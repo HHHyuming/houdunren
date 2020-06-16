@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: #3c6382;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        font-size: 14px;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: orange;
+        animation-name: ball;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      section {
+        width: 200px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+        position: absolute;
+        bottom: 50px;
+        transform: scale(1);
+        animation-name: ball-shadow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes ball {
+        to {
+          transform: translateY(84vh);
+        }
+      }
+      @keyframes ball-shadow {
+        to {
+          transform: scale(0.1);
+          filter: blur(10px);
+        }
+      }
+    </style>
+    <main>
+      <div></div>
+      <section></section>
+    </main>
+  </body>
+</html>

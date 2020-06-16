@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #079992;
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+      }
+      main {
+        width: 400px;
+        height: 400px;
+        /* background-color: #f6b93b; */
+        /* animation-name: hd; */
+        /* animation-duration: 2s; */
+        border: 1px solid white;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: #f6b93b;
+        animation-name: hd;
+        animation-duration: 3s;
+      }
+      @keyframes hd {
+        25% {
+          transform: translateX(300px);
+        }
+        50% {
+          transform: translate(300px, 300px);
+        }
+        60% {
+          transform: scale(2);
+        }
+        75% {
+          transform: translateY(300px);
+        }
+      }
+    </style>
+  </body>
+
+  <main>
+    <div></div>
+  </main>
+</html>

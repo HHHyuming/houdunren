@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: #3c6382;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        font-size: 14px;
+      }
+      main {
+        /* border: 1px solid red; */
+        margin-top: 2em;
+      }
+      section {
+        /* position: relative; */
+        /* transform: rotate(90deg); */
+        transform: translate(100px, 200px) rotate(45deg);
+        /* border: 2px solid orange; */
+        width: 100px;
+        /* height: 200px; */
+        animation-name: heart;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+      }
+      div:nth-child(1) {
+        transform: translateX(50px);
+      }
+      div:nth-child(2) {
+        background-color: red;
+        border-radius: 50%;
+      }
+      div:nth-child(3) {
+        background-color: red;
+
+        border-radius: 50%;
+        transform: translate(50px, -50px);
+      }
+
+      @keyframes heart {
+        from {
+          transform: translate(100px, 200px) rotate(45deg) scale(0.5);
+          opacity: 0.5;
+        }
+        to {
+          transform: translate(100px, 200px) rotate(45deg) scale(0.8);
+          opacity: 0.8;
+        }
+      }
+    </style>
+    <main>
+      <section>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+    </main>
+  </body>
+</html>

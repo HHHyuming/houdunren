@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: #3c6382;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        font-size: 14px;
+      }
+      main {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #ccc;
+        margin-left: 2em;
+        margin-top: 2em;
+        overflow: hidden;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        animation-name: change-border;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes change-border {
+        50% {
+          border: 2px solid black;
+          background-color: blueviolet;
+        }
+        100% {
+          transform: scale(2);
+          border: 2px dashed yellowgreen;
+          background-color: red;
+        }
+      }
+    </style>
+
+    <main>
+      <div></div>
+    </main>
+  </body>
+</html>
