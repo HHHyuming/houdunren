@@ -1,0 +1,12 @@
+let s = new Array(1, 2, 3);
+let s2 = [1, 2, 3];
+console.log(s);
+console.log(s instanceof Array);
+console.log(s2 instanceof Array);
+let n = new Number(3);
+let n2 = 3;
+console.log(n);
+console.log(n instanceof Number);
+console.log(n2 instanceof Number);
+console.log(typeof n);
+console.log(typeof n2);
