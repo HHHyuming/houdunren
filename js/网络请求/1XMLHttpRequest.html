@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function User() {
+      this.name = "1233";
+    }
+    const user = new User();
+    User.prototype.$axios = { name: "axios" };
+    console.log(user.name);
+    console.log(user.$axios.name);
+  </script>
+</html>

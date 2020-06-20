@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script src="./hd.js"></script>
+  <script>
+    let p = new HD((resolve, reject) => {
+      resolve("后盾人");
+      console.log("hdcms.com");
+    })
+      .then(
+        (value) => {
+          console.log(value);
+          return "大叔视频";
+        },
+        (reason) => {
+          console.log(reason);
+        }
+      )
+      .then(
+        (value) => {
+          console.log(value);
+        },
+        (reason) => {
+          console.log(reason);
+        }
+      );
+    console.log("houdunren.com");
+  </script>
+</html>

@@ -173,14 +173,24 @@ object.create(obj
 )
 
 # 类
-
+static method or property       只能使用class访问
+protected 使用Symbol this[Symbol(des)] = 'xx'
+private 使用#号
+super()     继承
+constructor     构造器
 # 模块
-
-
+AMD         浏览器
+commonjs    nodejs
+as          取别名
 # 正则
 
 # promise
-
+## 接口
+resolve
+reject
+all           全部成功即可
+allSettled    拿取成功的请求结果
+race          哪个先返回用哪个，如果最快的reject那么整promise 执行catch
 # 任务管理
 
 # promise 核心

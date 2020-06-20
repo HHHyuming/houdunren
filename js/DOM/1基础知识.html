@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="hd">houdunren.com</div>
+    <script>
+      let hd = document.getElementById("hd");
+
+      Object.assign(hd, {
+        color: "red",
+        change() {
+          this.style.color = this.color;
+          this.innerHTML = "我是最帅的帅";
+        },
+        onclick() {
+          this.change();
+        },
+      });
+    </script>
+  </body>
+</html>
