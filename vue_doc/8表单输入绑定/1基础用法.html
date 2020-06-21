@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<div id="example-5">
+		  <select v-model="selected">
+		    <option disabled value="">请选择</option>
+		    <option value="aa">A</option>
+		    <option>B</option>
+		    <option>C</option>
+		  </select>
+		  <span>Selected: {{ selected }}</span>
+		  <h2>修饰符</h2>
+		  <p>{{new_value}}</p>
+		  <input v-model.lazy="new_value">
+		</div>
+	</body>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		const vm = new Vue({
+		  el: '#example-5',
+		  data: {
+		    selected: '',
+			new_value:'default',
+		  }
+		})
+		
+	</script>
+</html>

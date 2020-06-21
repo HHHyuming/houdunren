@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<div v-if="loginType === 'username'">
+			  <label>Username</label>
+			  <input placeholder="Enter your username">
+			</div>
+			<div v-else>
+			  <label>Email</label>
+			  <input placeholder="Enter your email address">
+			</div>
+			<br>
+			<div v-if="loginType === 'username'">
+			  <label key="username">Username</label>
+			  <input placeholder="Enter your username" key="user-input">
+			</div>
+			<div v-else>
+			  <label key="email">Email</label>
+			  <input placeholder="Enter your email address" key="email-input">
+			</div>
+			<button type="button" @click="changeLoginType">
+				切换效果
+			</button>
+		</div>
+	</body>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+		const vm = new Vue({
+			el:"#app",
+			data:{
+				loginType: 'username',
+			},
+			methods:{
+				changeLoginType:function(){
+					if(this.loginType == 'username'){
+						this.loginType = ''
+					}else{
+						this.loginType = 'username'
+					}
+					
+				}
+			}
+			
+		})
+	</script>
+</html>

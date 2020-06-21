@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<submit-button>
+				<template v-slot:['header']>
+						我是替换的
+				</template>
+				改变text
+				</submit-button>
+		</div>
+	</body>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		// 作用域插槽
+		// 具名插槽
+		Vue.component('submit-button',{
+			template:`<button>
+			<slot name="header">我是头部</slot>
+			<slot>提交</slot>
+			</button>`
+		})
+		const vm = new Vue({
+			el:'#app',
+			data:{
+				
+			}
+		})
+	</script>
+</html>
