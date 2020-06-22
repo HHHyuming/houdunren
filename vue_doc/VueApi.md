@@ -97,5 +97,129 @@ aPlus: {
       }
     }
 
+> methods
 
+> watch
+监听响应式数据变化
+data:{a:1,b:{c:1}}
+watch:{
+	a(newValue,oldValue){
+		
+	},
+	'b.c'(newValue,oldValue){
+		
+	}
+}
+
+```
+
+# 选项/DOM
+```
+> el
+> template
+<script type=x-template"">
+> render
+
+> renderError
+# 当render出错是调用
+renderError(h,error){
+	return h('pre',error)
+}
+```
+
+# 选项/声明周期
+
+```
+> beforeCreate()
+> created
+
+> beforeMount
+> mounted
+
+> beforeUpdate
+> updated
+
+>activated
+deactivated
+
+>beforeDestroy
+> destroyed
+
+> errorCaptured
+```
+
+# 选项/ 资源
+
+```
+directives
+
+filters
+
+components
+```
+
+# 选项/组合
+```
+parent
+mixin
+extends
+provide
+```
+
+# 实例property
+```
+vm.$data
+vm.$props
+vm.$options
+vm.$root
+$parent
+$children
+$slots
+$refs
+$isServer
+$attrs
+$listener
+
+
+```
+
+# 实例方法/数据
+```
+vm.$watch
+vm.$set
+vm.$delete
+```
+
+# 实例方法、事件
+```
+vm.$on(自定义事件名，function)
+vm.$emit(自定义事件名，arg) ---> 触发自定义事件
+
+> $once   
+$off解绑
+$emit触发自定义事件
+```
+
+# 实例生命周期
+```
+$mount
+$forceUpdate
+$nextTick
+$destroy
+
+```
+
+# 特殊attribute
+```
+ref
+key 可以使组件不复用
+is  动态渲染组件
+
+```
+
+# 内置组件
+```
+component
+slot
+keep-alive
 ```
