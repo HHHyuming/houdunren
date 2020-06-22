@@ -9,71 +9,22 @@
 
 </style>
 <div id="app">
-	<my-c2 v-model="eventValue"></my-c2>
-	<my-click @click.native="master"></my-click>
+	<!-- <my-c2 v-model="eventValue"></my-c2>
+	<my-click @click.native="master"></my-click> -->
 </div>
 	</body>
 <script src="vue.js" type="text/javascript" charset="utf-8"></script>
 <script>
-	Vue.component('my-c2',{
-		data(){
-			return {
-				
-			}
-		},
-		props:['value'],
-		template: `
-		  <label @click="start">
-		    <input :value="value" v-on:input="changeEvent($event)">
-			{{value}}
-		  </label>
-		`,
-		methods:{
-			start(){
-				console.log('start');
-			},
-			changeEvent(event){
-				this.$emit('input',event.target.value)
-			}
-		},
-		computed:{
-			changeValue(newValue,oldValue){
-				
-			}
+	"use strict"
+	var vm = new Vue({
+	  data: { a: 1 },
+	  methods: {
+		plus: function () {
+		  console.log(this);
 		}
+	  }
 	})
-	Vue.component('my-click',{
-		template:`<div>
-		activated
-		<button @click.stop="f1">我是一个按钮</button>
-		<button @click.stop="f2">我是第二个按钮</button>
-		</div>`,
-		methods:{
-			f1(){
-				console.log('第一个')
-			},
-			f2(){
-				console.log('第er个')
-			}
-		}
-	})
-	const vm = new Vue({
-		el:"#app",
-		data:{
-			eventValue:123
-		},
-		methods:{
-			master(){
-				console.log('master');
-			},
-			inputEvent(){
-				console.log('event input');
-			}
-		}
-		
-	})
-	
-
+	console.log(vm);
 </script>
 
 </html>

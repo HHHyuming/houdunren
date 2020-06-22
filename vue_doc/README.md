@@ -30,20 +30,22 @@ v-slot:header ===> #header
 
 # Vue 实例方法
 
-```
-----------
-# methods
----------
-# components:{
+```js
+-------------------------------
+#1 methods
+-------------------------------
+#2 components:{
 	name:component
 }
-# watch(newValue,oldValue)
---------
+-------------------------------
+#3 watch(newValue,oldValue)
+-------------------------------
 props 对象写法
 props:{
 	title:String
 }
-# provide inject 提供给后代的方法
+-------------------------------
+#4 provide inject 提供给后代的方法
 provide:function(){
 	return{
 		testFunction:this.fun
@@ -51,6 +53,34 @@ provide:function(){
 }	
 
 后代使用 inject['testFunction'] 获取该开放的功能
+-------------------------------
+#5 directive
+组件外 Vue.directive
+组件内 directives:{
+	directive-name:{
+		<!-- 指令的定义 -->
+		inserted:function(el){
+			el.focus
+		}
+		<!-- 钩子函数 -->
+		bind
+		inserted
+		update
+	}
+}
+-------------------------------
+#6 filters
+局部使用
+filters：{
+	capitalize(value){
+		return xxx
+	}
+}
+
+全局使用
+Vue.filter('filter-name',(value)=>{})
+
+
 ```
 
 # Vue实例属性
@@ -61,6 +91,7 @@ $listeners 当前组件监听的所有事件
 $root 		根实例
 $parent		当前实例的父组件
 $refs.xxx	子元素
+$set(obj,key,value)
 ```
 
 
@@ -130,3 +161,18 @@ trim	去掉内容左右两边空白
 ```
 
 # 组件
+
+
+# 渲染函数 & JSX
+```
+createElement 参数
+createELement(标签 or 组件，数据对象，[子节点(createElement)])
+```
+
+
+# Vue配置
+```
+# 取消vue所有日志和告警
+Vue.config.silent = true
+
+```
